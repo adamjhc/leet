@@ -2,6 +2,14 @@
 name = "leet"
 version = "0.1.0"
 edition = "2021"
+authors = ["Adam Cox <adamjhcox@gmail.com"]
+license = "MIT"
+description = "A tool to quickly create and open projects for leetcode solutions"
+readme = "README.md"
+homepage = "https://github.com/adamjhc/leet"
+repository = "https://github.com/adamjhc/leet"
+keywords = ["cli", "leetcode"]
+categories = ["command-line-utilities"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
