@@ -1,3 +1,3 @@
 # leet
 
-A tool to quickly create a rust project for LeetCode solutions
+A tool to quickly create and open projects for LeetCode solutions
