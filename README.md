@@ -23,7 +23,6 @@ code .\0496_next-greater-element-i\
 
 - Blazing fast
 - Written in Rust
-- Zero dependencies
 
 ## Maybe Future features
 
