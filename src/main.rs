@@ -6,7 +6,7 @@ use clap::Parser;
 #[derive(Parser)]
 #[clap(version, about)]
 struct Cli {
-    #[clap(help = "Problem title copied from LeetCode. Of the form \"XXXX. Problem Name Here\"")]
+    /// Problem title copied from LeetCode. Of the form "XXXX. Problem Name Here"
     problem_title: String,
 }
 
