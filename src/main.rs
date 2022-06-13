@@ -5,13 +5,14 @@ use clap::Parser;
 
 #[derive(Parser)]
 struct Cli {
-    exercise_title: String,
+    /// Problem title copied from LeetCode. Of the form "XXXX. Problem Name Here"
+    problem_title: String,
 }
 
 fn main() {
     let args = Cli::parse();
 
-    let Problem { number, name } = get_problem_from(args.exercise_title);
+    let Problem { number, name } = get_problem_from(args.problem_title);
 
     let path = format!("{}_{}", &number, &name);
 
