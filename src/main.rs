@@ -4,8 +4,10 @@ use std::process::Command;
 use clap::Parser;
 
 #[derive(Parser)]
+#[clap(version, about)]
 struct Cli {
     /// Problem title copied from LeetCode. Of the form "XXXX. Problem Name Here"
+    #[clap()]
     problem_title: String,
 }
 
