@@ -41,11 +41,15 @@ mod tests {
     use crate::{get_problem_from, Problem};
 
     #[test]
-    fn test_prepending_zeroes() {
+    fn test_separates_number_and_name() {
         assert_eq!(
             get_problem_from("1234. Problem Name One".to_string()),
             Problem::new("1234", "problem-name-one")
         );
+    }
+
+    #[test]
+    fn test_prepending_zeroes() {
         assert_eq!(
             get_problem_from("234. Problem Name One".to_string()),
             Problem::new("0234", "problem-name-one")
