@@ -16,14 +16,13 @@ The input gets converted and the following commands are then run:
 
 ```sh
 cargo new 0496_next-greater-element-i --name next-greater-element-i --lib
-code .\0496_next-greater-element-i\
+C:\Program Files\Microsoft VS Code\Code.exe .\0496_next-greater-element-i\
 ```
 
 ## Features
 
 - Blazing fast
 - Written in Rust
-- Zero dependencies
 
 ## Maybe Future features
 

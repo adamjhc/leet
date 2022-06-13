@@ -1,33 +1,19 @@
-use std::env;
+use leet::{get_problem_from, Problem};
 use std::process::Command;
 
+use clap::Parser;
+
+#[derive(Parser)]
+#[clap(version, about)]
+struct Cli {
+    /// Problem title copied from LeetCode. Of the form "XXXX. Problem Name Here"
+    problem_title: String,
+}
+
 fn main() {
-    let mut args = env::args();
-    if args.len() > 2 {
-        panic!("Args should not exceed length 2")
-    }
+    let args = Cli::parse();
 
-    let title = args.nth(1).expect("No exercise name given");
-
-    let mut characters = title.chars().enumerate();
-
-    let mut number = String::new();
-    let mut name = String::new();
-    while let Some((index, character)) = characters.next() {
-        match character {
-            '0'..='9' => continue,
-            '.' => {
-                number = format!("{:0>4}", &title[0..index]);
-                name = title[index + 2..]
-                    .to_lowercase()
-                    .split_whitespace()
-                    .collect::<Vec<&str>>()
-                    .join("-");
-                break;
-            }
-            _ => panic!("Unexpected character at start {} {}", index, character),
-        }
-    }
+    let Problem { number, name } = get_problem_from(args.problem_title);
 
     let path = format!("{}_{}", &number, &name);
 

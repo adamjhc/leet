@@ -2,7 +2,7 @@
 name = "leet"
 version = "0.1.1"
 edition = "2021"
-authors = ["Adam Cox <adamjhcox@gmail.com"]
+authors = ["Adam Cox <adamjhcox@gmail.com>"]
 license = "MIT"
 description = "A tool to quickly create and open projects for LeetCode solutions"
 readme = "README.md"
@@ -14,3 +14,5 @@ categories = ["command-line-utilities"]
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+clap = { version = "3.1.18", features = ["derive"] }
+regex = "1"
