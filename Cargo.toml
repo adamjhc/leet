@@ -2,7 +2,7 @@
 name = "leet"
 version = "0.1.1"
 edition = "2021"
-authors = ["Adam Cox <adamjhcox@gmail.com"]
+authors = ["Adam Cox <adamjhcox@gmail.com>"]
 license = "MIT"
 description = "A tool to quickly create and open projects for LeetCode solutions"
 readme = "README.md"
