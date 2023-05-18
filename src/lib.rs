@@ -16,7 +16,7 @@ impl Problem {
 }
 
 pub fn get_problem_from(title: String) -> Problem {
-    let re = Regex::new(r"^(\d{1,4})\. ((?:[\w\d]+ ?)+)$").unwrap();
+    let re = Regex::new(r"^(\d{1,4})\. ((?:.+ ?)+)$").unwrap();
 
     match re.captures(&title) {
         Some(captures) => {
@@ -61,6 +61,22 @@ mod tests {
         assert_eq!(
             get_problem_from("4. Problem Name One".to_string()),
             Problem::new("0004", "problem-name-one")
+        );
+    }
+
+    #[test]
+    fn test_weird_titles() {
+        assert_eq!(
+            get_problem_from("303. Range Sum Query - Immutable".to_string()),
+            Problem::new("0303", "range-sum-query---immutable")
+        );
+        assert_eq!(
+            get_problem_from("28. Implement strStr()".to_string()),
+            Problem::new("0028", "implement-strstr()")
+        );
+        assert_eq!(
+            get_problem_from("15. 3Sum".to_string()),
+            Problem::new("0015", "3sum")
         );
     }
 
